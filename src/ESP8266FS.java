@@ -301,7 +301,8 @@ public class ESP8266FS implements Tool {
     if(isNetwork){
       String pythonCmd;
       if(PreferencesData.get("runtime.os").contentEquals("windows"))
-          pythonCmd = "python.exe";
+          //pythonCmd = "python.exe";
+          pythonCmd = PreferencesData.get("tools.esptool.network_cmd.windows");
       else
           pythonCmd = "python";
       
